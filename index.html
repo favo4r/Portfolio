@@ -10,9 +10,7 @@
 <body>
     <!--Header/Navbar-->
     <header class="header">
-        <div class="logo">
-            <img src="/assets/images/favor.png" alt="Logo">
-        </div>
+        <img class="logo" src="/assets/images/favor.png" alt="Logo">
         <nav class="nav-links"> 
             <ul>
                 <li><a href="/index.html">Home</a></li>
@@ -23,8 +21,11 @@
         </nav>
         <span>
             Available for Projects
-            <a href="/portfolio">Get started</a>
+            <a href="/contact.html" class="btn btn-primary">Get started</a>
         </span>
+        <a href="javascript:void(0);" class="menu-toggle" onclick="myFunction()">
+            <img src="/assets/icons/hamburger-menu-svgrepo-com (1).svg" alt="Menu Icon">
+        </a>
     </header>
 
     <!--Main-->
@@ -33,7 +34,7 @@
         <!-- ==hero Section== --> 
         <section class="hero">
             <div>
-                <h6>HELLO, I'M</h6>
+                <h6 class="eyebrow">HELLO, I'M</h6>
                 <h1>FAVOUR</h1>
             </div>
             <div>
@@ -43,19 +44,19 @@
                     carrying out the simplest, most functional solution.</p>
                 </span>
             </div>
-            <div>
+            <div class="hero-imgs">
                 <img src="/assets/images/hero image.png" alt="">
                 <img src="/assets/images/hero-image.png" alt="Hero Image">
             </div>
-            <div>
-                <a href="#">Start your Project</a><img src="/assets/icons/circle-dot.svg" alt="">
-                <a href="#">Get in Touch</a> 
+            <div class="hero-cta">
+                <a href="/contact.html" class="btn btn-primary">Start your Project<img src="/assets/icons/circle-dot-regular-full.svg" alt="" class="icon"></a>
+                <a href="/contact.html" class="btn btn-secondary">Get in Touch <img src="/assets/icons/phone-solid-full.svg" alt="" class="icon"></a> 
             </div>
         </section>
         
         <!-- == INTRODUCTION == -->
         <section class="Intro">
-            <span>Introduction</span>
+            <span class="eyebrow">Introduction</span>
             <p>Favour is a self-employed creative designer and founder of Designme.co. Known for her innovative approach to digital solutions, with over five years of experience transforming concepts into impactful, strategically driven visual communications. Specialized in brand identity, social media design, UI/UX, and web development. Favour is dedicated to continuous learning and making a positive impact in the creative industry. She’s currently pursuing a degree in Computer Science, bridging the gap between cutting-edge technology and purposeful design.</p>
             <blockquote>"Design is more than aesthetics; it is a tool for solving problems."</blockquote>
             <div class="quote-card">
@@ -118,7 +119,7 @@
         <!-- === Skillset === -->
         <section class="Skillset">
             <h2>Skillset</h2>
-            <p>We don’t just deliver services we deliver outcomes. Our core competencies empower brands to grow, stand out, and lead with confidence.</p>
+            <p class="sect-sub">We don’t just deliver services we deliver outcomes. Our core competencies empower brands to grow, stand out, and lead with confidence.</p>
             <div class="skill-list">
                 <span>Adobe Photoshop</span>
                 <span>Adobe Illustrator</span>
@@ -132,25 +133,25 @@
             </div>
             <div class="service-grid">
                 <div class="service-card">
-                    <img src="/assets/icons/skill2.svg" alt="Skill 2">
+                    <img src="/assets/icons/skill2.svg" alt="Skill 2" class="icon">
                     <h3>Graphic Design</h3>
                     <h4>Bring your brand to life.</h4>
                     <p>I design compelling visual identities and marketing materials that help businesses stand out. Services include logo design, brand identity, social media graphics, marketing collateral, presentation design, print materials, packaging, layout design, advertising creatives, and other visual communication assets.</p>
                 </div>
                 <div class="service-card">
-                    <img src="/assets/icons/skill3.svg" alt="Skill 3">
+                    <img src="/assets/icons/skill3.svg" alt="Skill 3" class="icon">
                     <h3>Web Design</h3>
                     <h4>Create intuitive digital experiences</h4>
                     <p>I craft modern, high-performing websites built around user experience, clarity, and conversion. Every page is designed to guide users seamlessly toward action.</p>
                 </div>
                 <div class="service-card">
-                    <img src="/assets/icons/skill1.svg" alt="Skill 1">
+                    <img src="/assets/icons/skill1.svg" alt="Skill 1" class="n">
                     <h3>Web Development</h3>
                     <h4>Elevate Your Digital Presence</h4>
                     <p>I develop modern websites and web applications using clean, maintainable code. My services include responsive websites, landing pages, portfolio websites, e-commerce solutions, API integration, and ongoing maintenance to ensure a seamless user experience.</p>
                 </div>
                 <div class="service-card">
-                    <img src="/assets/icons/skill4.svg" alt="Skill 4">
+                    <img src="/assets/icons/skill4.svg" alt="Skill 4" class="icon">
                     <h3>Video Editing</h3>
                     <h4>Turn ideas into engaging videos.</h4>
                     <p>I edit professional videos for businesses, creators, and brands. Services include social media content, YouTube videos, transitions, color correction, sound enhancement, subtitles, reels, and shorts for different digital platforms.</p>
@@ -214,8 +215,8 @@
                     <img src="" alt="">
                 </div>
             </div>
-            <a class="btn btn-primary" href="">Start A Project</a>
-            <a class="btn btn-sec" href="">Join The Brands Who Trust Me</a>
+            <a class="btn btn-primary" href="">Start Your Project</a>
+            <a class="btn btn-secondary" href="">Join The Brands Who Trust Me</a>
         </Section>
 
         <!-- === CONTACT === -->
@@ -232,7 +233,7 @@
                     <textarea name="message" rows="4" cols=""></textarea>
                 </form>      
             </div>
-            <a href="" type="submit">Start Your project</a>
+            <a href="" type="submit" class="btn btn-primary">Start Your project</a>
             <div class="contact-details">
                 <img class="icon" src="/assets/icons/envelope-solid-full.svg" alt="">
                 <a href="mailto:Faveokeke26@gmail.com">Faveokeke26@gmail.com</a>
@@ -249,10 +250,10 @@
         <div class="footer-content">
             <img class="footer-logo" src="/assets/images/Favor_logo.png" alt="">
             <div class="footer-socials">
-                <a href="https://www.instagram.com/favo4r"><img src="/assets/icons/instagram-brands-solid-full.svg" alt=""></a>
-                <a href="https://www.tiktok.com/@favee"><img src="/assets/icons/tiktok-brands-solid-full.svg" alt=""></a>
-                <a href="https://www.linkedin.com/in/favo4r"><img src="/assets/icons/linkedin-brands-solid-full.svg" alt=""></a>
-                <a href="https://github.com/favo4r"><img src="/assets/icons/github-brands-solid-full.svg" alt=""></a>
+                <a href="https://www.instagram.com/favo4r" class="icon"><img src="/assets/icons/instagram-brands-solid-full.svg" alt=""></a>
+                <a href="https://www.tiktok.com/@favee" class="icon"><img src="/assets/icons/tiktok-brands-solid-full.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/favo4r" class="icon"><img src="/assets/icons/linkedin-brands-solid-full.svg" alt=""></a>
+                <a href="https://github.com/favo4r" class="icon"><img src="/assets/icons/github-brands-solid-full.svg" alt=""></a>
             </div>
             <a href="#">Legal</a>
             <a href="#">Privacy Policy</a>
