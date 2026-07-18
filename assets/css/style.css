@@ -1319,6 +1319,16 @@ form {
     text-align: center;
     line-height: 0.8;
   }
+
+   main > section:first-of-type > p{
+    max-width: 86ch;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a4a47;
+    text-align: center;
+    margin: 0 auto 64px;                                                                                  
+  }
+
   /* ============ CERTIFICATES ============ */
   .certicate{ max-width: 1200px; margin: 0 auto 64px; padding: 0 32px; }
   .certicate .eyebrow{
@@ -1327,12 +1337,14 @@ form {
     letter-spacing: 0.08em;
     color: var(--muted);
     margin: 0 0 10px 0;
+    font-family: var(--body-font);
   }
   .certicate .sub-sect{
     font-size: 15px;
     color: #4a4a47;
     max-width: 50ch;
     margin: 0 0 32px 0;
+    font-family: var(--body-font);
   }
   .certificate-grid{
     display:grid;
@@ -1348,16 +1360,143 @@ form {
   .certificate-card > span{
     font-size: 12px;
     color: var(--muted);
+    font-family: var(--body-font);
   }
   .certificate-card h3{
     font-size: 16px;
+    font-family: var(--display-font);
     font-weight: 800;
     margin: 12px 0 8px 0;
   }
   .certificate-card p{
+    font-family: var(--body-font);
     font-size: 13px;
     color: #4a4a47;
     margin: 0;
+  }
+
+  .projects{
+    max-width: 100%;
+    
+  }
+  .project-filter{
+    display:flex;
+    gap: 10px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .project-filter button{
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .project-filter div.active button{
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
+  }
+ .page-hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px 32px 0;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .page-hero h1{
+    grid-column: 1 / -1;
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 40px 0;
+    padding: 0 4px;
+  }
+  .page-hero .hero-stats{
+    display: contents;
+  }
+  .page-hero .hero-stats > div:first-child{
+    display:flex;
+  }
+  .page-hero .stat{
+    flex: 1;
+    padding: 28px 24px;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .page-hero .stat:last-child{ border-right: none; }
+  .page-hero .stat span:first-child{
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .page-hero .stat span:last-child{
+    font-size: 34px;
+    font-weight: 800;
+  }
+  .page-hero .hero-text{
+    padding: 28px 28px 40px;
+  }
+  .page-hero .hero-text p{
+    margin: 0 0 12px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+  .page-hero .hero-text h3{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    max-width: 30ch;
+
+  /* ============ PROJECT GRID ============ */
+  .project-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .project-card{
+    border: 1px solid var(--line);
+    overflow: hidden;
+    transition: transform 0.15s ease;
+  }
+  .project-card:hover{ transform: translateY(-3px); }
+  .project-card a{ display:block; }
+  .project-card .thumb{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #e7e7e4;
+    overflow: hidden;
+  }
+  .project-card .thumb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .project-card h3{
+    margin: 18px 20px 4px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .project-card p{
+    margin: 0 20px 20px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .project-card.is-hidden{ display:none; }
+ 
+  @media (max-width: 700px){
+    .page-hero{ grid-template-columns: 1fr; }
+    .page-hero .hero-stats > div:first-child{ border-right:none; }
+    .project-grid{ grid-template-columns: 1fr; }
+    .page-hero h1{ font-size: 44px; }
   }
 
 .footer-content {
