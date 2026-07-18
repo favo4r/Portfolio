@@ -6,6 +6,7 @@
     <title>Favour</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="/assets/icons/ICON.png">
+    <script src="/assets/java/javascript.js"></script>
 </head>
 <body>
     <!--Header/Navbar-->
@@ -33,36 +34,52 @@
 
         <!-- ==hero Section== --> 
         <section class="hero">
-            <div>
-                <h6 class="eyebrow">HELLO, I'M</h6>
-                <h1>FAVOUR</h1>
+            <div class="hero-texts"> 
+                <div class="hero-intro">
+                    <h6 class="eyebrow">HELLO, I'M</h6>
+                    <h1>FAVOUR</h1>
+                </div>
+                <div class="hero-paragraph">
+                    <span>
+                        <p>I am passionate about creative design, art/crafts, <br>
+                        and technology.i approach problems rationally <br>
+                        pragmatically, meticulously carrying out the simplest, <br>
+                        most functional solution.</p>
+                    </span>
+                </div>  
             </div>
-            <div>
-                <span>
-                    <p>I am passionate about creative design, art/crafts, and technology.<br>
-                    approach problems rationally and pragmatically, meticulously <br>
-                    carrying out the simplest, most functional solution.</p>
-                </span>
-            </div>
+            
             <div class="hero-imgs">
-                <img src="/assets/images/hero image.png" alt="">
-                <img src="/assets/images/hero-image.png" alt="Hero Image">
+                <div class="hero-image dark"></div>
+                <div class="hero-image bright"></div>
+                <div class="hero-cta">
+                    <a href="/contact.html" class="btn btn-primary">Start your Project<img src="/assets/icons/circle-dot-regular-full.svg" alt="" class="icon"></a>
+                    <a href="/contact.html" class="btn btn-secondary">Get in Touch <img src="/assets/icons/phone-solid-full.svg" alt="" class="icon"></a> 
+                </div>
             </div>
-            <div class="hero-cta">
-                <a href="/contact.html" class="btn btn-primary">Start your Project<img src="/assets/icons/circle-dot-regular-full.svg" alt="" class="icon"></a>
-                <a href="/contact.html" class="btn btn-secondary">Get in Touch <img src="/assets/icons/phone-solid-full.svg" alt="" class="icon"></a> 
-            </div>
+            
         </section>
         
         <!-- == INTRODUCTION == -->
         <section class="Intro">
-            <span class="eyebrow">Introduction</span>
-            <p>Favour is a self-employed creative designer and founder of Designme.co. Known for her innovative approach to digital solutions, with over five years of experience transforming concepts into impactful, strategically driven visual communications. Specialized in brand identity, social media design, UI/UX, and web development. Favour is dedicated to continuous learning and making a positive impact in the creative industry. She’s currently pursuing a degree in Computer Science, bridging the gap between cutting-edge technology and purposeful design.</p>
-            <blockquote>"Design is more than aesthetics; it is a tool for solving problems."</blockquote>
-            <div class="quote-card">
-                <img class="quote-img" src="/assets/images/about-image.png" alt="About Image">
-                <p class="quote-name">Favour okeke</p>
-            </div>
+            <div class="Intro-card">
+                <div>
+                    <h6 class="eyebrow">Introduction</h6>
+                    <p>Favour is a creative designer and founder of Designme.co, specializing in brand identity, social media design, UI/UX,
+                    and web development. With 5+ years of experience, she transforms ideas into impactful digital solutions while
+                    bridging the gap between design and technology through continuous learning.</p>
+                </div>
+                <div class="quote">
+                    <blockquote>"Design is more than aesthetics; it is a tool for solving problems."</blockquote>
+                    <div class="quote-card">
+                        <img class="quote-img" src="/assets/images/quote-img.jpeg" alt="About Image">
+                        <div>
+                            <p class="quote-name">Favour okeke</p>
+                            <p class="role">Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>                        
             <div class="intro-stat">
                 <div class="stat">
                     <span class="stat-no">250+</span>
@@ -85,32 +102,49 @@
             <div class="project-grid">
                 <div class="project-card">
                     <a href="#">
-                        <img src="/assets/images/project1.png" alt="Project 1">
-                        <h3>Project 1</h3>
-                        <p class="tagline">Lorem Ipsum</p>
-                        <p class="cta">jump To Project</p>
-                        <p class="duration">project Time: 3 months</p>
-                        <p class="field">project Field: Web Design</p>
+                        <div class="project-content">
+                            <h3>Project 1</h3>
+                            <p class="tagline">Lorem Ipsum</p>
+                            <p class="cta">jump To Project</p>
+                        </div>
+                        <img src="/assets/images/quote-img.jpeg" alt="Project 1">  
+                        <div class="project-meta">
+                            <img src="/assets/icons/arrow-up-right.svg" alt="">
+                            <div>
+                                <p class="duration">project Time: 3 months</p>
+                                <p class="field">project Field: Web Design</p>
+                            </div>
+                        </div>                   
                     </a>
                 </div>
                 <div class="project-card">
                     <a href="#">
-                        <img src="/assets/images/project2.png" alt="Project 2">
-                        <h3>Project 2</h3>
-                        <p class="tagline">Lorem Ipsum</p>
-                        <p class="cta">jump To Project</p>
-                        <p class="duration">project Time: 3 months</p>
-                        <p class="field">project Field: Web Design</p>
+                        <div class="project-content">
+                            <h3>Project 1</h3>
+                            <p class="tagline">Lorem Ipsum</p>
+                            <p class="cta">jump To Project</p>
+                        </div>
+                        <img src="/assets/images/quote-img.jpeg" alt="Project 1">  
+                        <div class="project-meta">
+                            <img src="/assets/icons/arrow-up-right.svg" alt="">
+                            <p class="duration">project Time: 3 months</p>
+                            <p class="field">project Field: Web Design</p>
+                        </div>
                     </a>
                 </div>
                 <div class="project-card">
                     <a href="#">
-                        <img src="/assets/images/project3.png" alt="Project 3">
-                        <h3>Project 3</h3>
-                        <p class="tagline">Lorem Ipsum</p>
-                        <p class="cta">jump To Project</p>
-                        <p class="duration">project Time: 3 months</p>
-                        <p class="field">project Field: Web Design</p>
+                        <div class="project-content">
+                            <h3>Project 1</h3>
+                            <p class="tagline">Lorem Ipsum</p>
+                            <p class="cta">jump To Project</p>
+                        </div>
+                        <img src="/assets/images/quote-img.jpeg" alt="Project 1">  
+                        <div class="project-meta">
+                            <img src="/assets/icons/arrow-up-right.svg" alt="">
+                            <p class="duration">project Time: 3 months</p>
+                            <p class="field">project Field: Web Design</p>
+                        </div>
                     </a>
                 </div>
             </div>
