@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
     <!--===Header/Navba===r-->
     <header class="header">
-        <div class="logo">
-            <img src="/assets/images/favor.png" alt="Logo">
-        </div>
+        <img class="logo" src="/assets/images/favor.png" alt="Logo">
         <nav class="nav-links"> 
             <ul>
                 <li><a href="/index.html">Home</a></li>
@@ -21,39 +20,73 @@
         </nav>
         <span>
             Available for Projects
-            <a href="/portfolio">Get started</a>
+            <a href="/contact.html" class="btn btn-primary">Get started</a>
         </span>
+        <a href="javascript:void(0);" class="menu-toggle" onclick="myFunction()">
+            <img src="/assets/icons/hamburger-menu-svgrepo-com (1).svg" alt="Menu Icon">
+        </a>
     </header>
 
     <!-- === Main === -->
     <main>
 
         <!-- === Contact Hero === -->
-        <section class="contact-hero">
-            <h1>Contact Us</h1>
-            <div><img src="" alt=""></div>
-            <h3>Get in touch and let’s create a solution that drives results.</h3>
-            <div contact-form>
+        <section class="contact">
+            <div class="col col-title">
+                <h2>Contact</h2>
+        
+                <div class="copy">
+                    <p>We have an expert for every need — from web design and SEO to branding,
+                        conversion optimization, and content strategy. Whatever your digital goal,
+                        our team delivers solutions that drive measurable results.</p>
+                </div>
+                <div class="contact-details">
+                    <div class="detail-row">
+                        <img class="icon" src="/assets/icons/envelope-solid-full.svg" alt="">
+                        <div class="text-group">
+        
+                            <a href="mailto:Faveokeke26@gmail.com">Faveokeke26@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <img class="icon" src="/assets/icons/square-whatsapp-solid-full.svg" alt="">
+                        <div class="text-group">
+                            <a href="https://wa.me/2349129596735">+234-912-9596-735</a>
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <img class="icon" src="/assets/icons/telegram-brands-solid-full.svg" alt="">
+                        <div class="text-group">
+                            <a href="https://t.me/Fav4okeke">@Fav4okeke</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col col-form">
+                <h3 class="headline">Get in touch and let&rsquo;s create a solution that drives results.</h3>
+        
                 <form action="">
-                    <label for="name">Name*</label> <br>
-                    <input type="text" name="Name" id="name"> <br>
-                    <label for="email">Email*</label> <br>
-                    <input type="text" name="email" id="email"> <br>
-                    <label for="message">Message*</label> <br>
-                    <textarea name="message" rows="4" cols=""></textarea>
-                </form>      
-            </div>
-            <a href="" type="submit">Start Your project</a>
-            <div class="contact-details">
-                <img class="icon" src="/assets/icons/envelope-solid-full.svg" alt="">
-                <a href="mailto:Faveokeke26@gmail.com">Faveokeke26@gmail.com</a>
-                <img class="icon" src="/assets/icons/square-whatsapp-solid-full.svg" alt="">
-                <a href="https://wa.me/2349129596735">+234-912-9596-735</a>
-                <img class="icon" src="/assets/icons/telegram-brands-solid-full.svg" alt="">
-                <a href="https://t.me/Fav4okeke">@Fav4okeke</a>
-            </div>
-            <div class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d991.626125298124!2d6.7129330107795555!3d6.196971314183121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1783619267682!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <div class="field">
+                        <label for="name">Name*</label>
+                        <input type="text" name="Name" id="name">
+                    </div>
+                    <div class="field">
+                        <label for="email">Email*</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div class="field message">
+                        <label for="message">Message*</label>
+                        <textarea name="message" id="message" rows="2"></textarea>
+                        <span class="arrow">&#8594;</span>
+                    </div>
+                </form>
+                <div class="contact-cta">
+                    <a href="" class="btn btn-primary">Start Your Project</a>
+                </div>
+        
+        
+        
             </div>
         </section>
 

@@ -18,36 +18,20 @@
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/projects.html">Projects</a></li>
                 <li><a href="/contact.html">Contact</a></li>  
+                <li><a href="/planner.html">Planner</a></li>
             </ul>
         </nav>
         <span>
             Available for Projects
-            <a href="#">Get started</a>
+            <a href="/contact.html" class="btn btn-primary">Get started</a>
         </span>
     </header>
 
     <main>
 
         <!-- === HERO === -->
-        <section>
+        <section class="about-hero">
             <h1>About me</h1>
-            <h6>BIO</h6>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi dolor provident nobis tempora in veritatis praesentium incidunt vero, quibusdam alias?</p>
-            <div>
-                <div class="hero-stat">
-                <div class="stat">
-                    <span class="stat-no">250+</span>
-                    <span class="stat-label">Projects Completed</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-no">5+</span>
-                    <span class="stat-label">Years of Experience</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-no">50+</span>
-                    <span class="stat-label">Web Solutions</span>
-                </div>
-            </div>
         </section>
 
         <!-- === PROCESS === -->
@@ -172,28 +156,63 @@
 
          <!-- === CONTACT === -->
          <section class="contact">
-            <h2>Contact</h2>
-            <h3>Get in touch and let’s create a solution that drives results.</h3>
-            <div contact-form>
+            <div class="col col-title">
+                <h2>Contact</h2>
+        
+                <div class="copy">
+                    <p>We have an expert for every need — from web design and SEO to branding,
+                        conversion optimization, and content strategy. Whatever your digital goal,
+                        our team delivers solutions that drive measurable results.</p>
+                </div>
+                <div class="contact-details">
+                    <div class="detail-row">
+                        <img class="icon" src="/assets/icons/envelope-solid-full.svg" alt="">
+                        <div class="text-group">
+        
+                            <a href="mailto:Faveokeke26@gmail.com">Faveokeke26@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <img class="icon" src="/assets/icons/square-whatsapp-solid-full.svg" alt="">
+                        <div class="text-group">
+                            <a href="https://wa.me/2349129596735">+234-912-9596-735</a>
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <img class="icon" src="/assets/icons/telegram-brands-solid-full.svg" alt="">
+                        <div class="text-group">
+                            <a href="https://t.me/Fav4okeke">@Fav4okeke</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col col-form">
+                <h3 class="headline">Get in touch and let&rsquo;s create a solution that drives results.</h3>
+        
                 <form action="">
-                    <label for="name">Name*</label> <br>
-                    <input type="text" name="Name" id="name"> <br>
-                    <label for="email">Email*</label> <br>
-                    <input type="text" name="email" id="email"> <br>
-                    <label for="message">Message*</label> <br>
-                    <textarea name="message" rows="4" cols=""></textarea>
-                </form>      
+                    <div class="field">
+                        <label for="name">Name*</label>
+                        <input type="text" name="Name" id="name">
+                    </div>
+                    <div class="field">
+                        <label for="email">Email*</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div class="field message">
+                        <label for="message">Message*</label>
+                        <textarea name="message" id="message" rows="2"></textarea>
+                        <span class="arrow">&#8594;</span>
+                    </div>
+                </form>
+                <div class="contact-cta">
+                    <a href="" class="btn btn-primary">Start Your Project</a>
+                </div>
+        
+        
+        
             </div>
-            <a href="" type="submit">Start Your project</a>
-            <div class="contact-details">
-                <img class="icon" src="/assets/icons/envelope-solid-full.svg" alt="">
-                <a href="mailto:Faveokeke26@gmail.com">Faveokeke26@gmail.com</a>
-                <img class="icon" src="/assets/icons/square-whatsapp-solid-full.svg" alt="">
-                <a href="https://wa.me/2349129596735">+234-912-9596-735</a>
-                <img class="icon" src="/assets/icons/telegram-brands-solid-full.svg" alt="">
-                <a href="https://t.me/Fav4okeke">@Fav4okeke</a>
-            </div>
-         </section>
+        </section>
     </main>
 
     <!-- === FOOTER ==== -->
@@ -204,11 +223,14 @@
                 <a href="https://www.instagram.com/favo4r" class="icon"><img src="/assets/icons/instagram-brands-solid-full.svg" alt=""></a>
                 <a href="https://www.tiktok.com/@favee" class="icon"><img src="/assets/icons/tiktok-brands-solid-full.svg" alt=""></a>
                 <a href="https://www.linkedin.com/in/favo4r" class="icon"><img src="/assets/icons/linkedin-brands-solid-full.svg" alt=""></a>
-                <a href="https://github.com/favo4r" class="icon"> </a>
+                <a href="https://github.com/favo4r" class="icon"><img src="/assets/icons/github-brands-solid-full.svg" alt=""></a>
             </div>
-            <a href="#">Legal</a>
-            <a href="#">Privacy Policy</a>
+            <div class="footer-links">
+                <a href="#">Legal</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            
         </div>
-    </footer>
+    </footer> 
 </body>
 </html>

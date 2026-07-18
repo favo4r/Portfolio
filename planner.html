@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Planner</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/planner.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+ 
+</head>
+
+<body>
+
+
+
+  <header class="header">
+    <div class="logo">
+      <img src="/assets/images/favor.png" alt="Logo">
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/planner.html">Planner</a></li>
+      </ul>
+    </nav>
+    <span>
+      Available for Projects
+      <a href="/contact.html" class="btn btn-primary">Get started</a>
+    </span>
+  </header>
+
+  <main class="planner-wrap">
+    <h1 class="planner-title">Academic Planner</h1>
+
+    <div class="planner-card">
+      <label class="planner-label" for="taskName">Task name</label>
+      <input class="planner-input" id="taskName" placeholder="e.g. Submit COS 106 Portfolio">
+
+      <label class="planner-label" for="taskCourse">Course</label>
+      <select class="planner-select" id="taskCourse">
+        <option value="">Select course</option>
+        <option>Problem Solving</option>
+        <option>Nigerian People and Culture</option>
+        <option>Elementary Mathematics II – Calculus</option>
+        <option>General Physics II – Electricity & Magnetism</option>
+        <option>General Practical Physics II</option>
+        <option>Introduction to Web Technologies</option>
+        <option>Communication in English II</option>
+      </select>
+
+      <label class="planner-label" for="taskDate">Due date</label>
+      <input class="planner-input" type="date" id="taskDate">
+
+      <button class="btn-add" id="addBtn">Add Task</button>
+    </div>
+
+    <div class="planner-card">
+      <h2>My Tasks</h2>
+      <ul id="taskList"></ul>
+      <p id="emptyMsg" class="empty">No tasks yet. Add one above.</p>
+    </div>
+  </main>
+  <footer class="footer">
+        <div class="footer-content">
+            <img class="footer-logo" src="/assets/images/Favor_logo.png" alt="">
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/favo4r"><img src="/assets/icons/instagram-brands-solid-full.svg" alt=""></a>
+                <a href="https://www.tiktok.com/@favee"><img src="/assets/icons/tiktok-brands-solid-full.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/favo4r"><img src="/assets/icons/linkedin-brands-solid-full.svg" alt=""></a>
+                <a href="https://github.com/favo4r"><img src="/assets/icons/github-brands-solid-full.svg" alt=""></a>
+            </div>
+            <a href="#">Legal</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // COS 106 – Academic Planner
+    let tasks = JSON.parse(localStorage.getItem('miva_tasks_michelle') || '[]');
+
+    const nameInput = document.getElementById('taskName');
+    const courseInput = document.getElementById('taskCourse');
+    const dateInput = document.getElementById('taskDate');
+    const listEl = document.getElementById('taskList');
+    const emptyMsg = document.getElementById('emptyMsg');
+
+    document.getElementById('addBtn').onclick = addTask;
+
+    function save() { localStorage.setItem('miva_tasks_michelle', JSON.stringify(tasks)); }
+
+    function addTask() {
+      const name = nameInput.value.trim();
+      const course = courseInput.value;
+      const date = dateInput.value;
+      if (!name) { alert('Please enter a task name'); return; }
+      tasks.push({ id: Date.now(), name, course, date, done: false });
+      nameInput.value = ''; courseInput.value = ''; dateInput.value = '';
+      save(); render();
+    }
+
+    function toggleComplete(id) {
+      const t = tasks.find(t => t.id === id);
+      if (t) { t.done = !t.done; save(); render(); }
+    }
+
+    function deleteTask(id) {
+      tasks = tasks.filter(t => t.id !== id);
+      save(); render();
+    }
+
+    function render() {
+      listEl.innerHTML = '';
+      emptyMsg.style.display = tasks.length ? 'none' : 'block';
+      tasks.forEach(t => {
+        const li = document.createElement('li');
+        li.className = 'task-item' + (t.done ? ' complete' : '');
+        li.innerHTML = `
+      <div class="task-info">
+        <div class="task-name">${t.name}</div>
+        <div class="task-meta">
+          ${t.course ? `<span class="tag">${t.course}</span>` : ''}
+          ${t.date ? 'Due: ' + t.date : 'No due date'}
+        </div>
+      <button class="icon-btn" onclick="toggleComplete(${t.id})" title="Mark complete">✓</button>
+      <button class="icon-btn" onclick="deleteTask(${t.id})" title="Delete">✕</button>
+    `;
+        listEl.appendChild(li);
+      });
+    }
+
+    if (tasks.length === 0) {
+      tasks = [
+        { id: 1, name: 'Submit COS 106 Portfolio Website', course: 'Introduction to Web Technologies', date: '', done: false },
+        { id: 2, name: 'Read Calculus notes Ch.3', course: 'Elementary Mathematics II – Calculus', date: '', done: false }
+      ];
+      save();
+    }
+    render();
+  </script>
+</body>
+
+</html>

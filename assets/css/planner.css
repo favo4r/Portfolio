@@ -1,0 +1,186 @@
+:root {
+  --forest-green: #002B2A;
+  --secondary-color: #C8C788;
+  --accent-color: #F8D0DD;
+  --bone-faint: #F4EFE6;
+  --bone-deep: #DFD8C2;
+  --line: #5E6C5B;
+  --text-ink: #12130F;
+
+
+  --display-font: 'Montserrat', sans-serif;
+  --body-font: 'Inter', sans-serif;
+  --mono-font: 'IBM Plex Mono', monospace;
+
+  --container: 1250px;
+  --gutter: clamp(1.20rem, 4vw, 3rem);
+  --section-pad: clamp(4rem, 9vw, 7.5rem);
+  --radius-s: 3px;
+  --radius-m: 6px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.planner-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 60px
+    }
+
+    .planner-title {
+      font-size: 1.6rem;
+      margin-bottom: 4px;
+      font-family: var(--display-font);
+    }
+
+    .planner-sub {
+      opacity: .75;
+      font-size: 14px;
+      margin-bottom: 18px
+    }
+
+    .planner-card {
+      background: var(--bone-deep);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .06);
+      margin-bottom: 20px
+    }
+
+    .planner-card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      font-family: var(--display-font);
+    }
+
+    .planner-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 12px 0 5px
+    }
+
+    .planner-input,
+    .planner-select {
+      width: 100%;
+      padding: 12px;
+      border: 1.5px solid var(--forest-green);
+      border-radius: 12px;
+      font-size: 15px;
+      background: var(--bone-faint);
+      font-family: var(--body-font);
+    }
+
+    .planner-input:focus,
+    .planner-select:focus {
+      outline: none;
+      border-color: var(--forest-green);
+    }
+
+    .btn-add {
+      cursor: pointer;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-weight: 700;
+      font-size: 15px;
+      background: var(--forest-green);
+      color: #fff;
+      width: 100%;
+      margin-top: 14px
+    }
+
+    .btn-add:hover {
+      opacity: .92
+    }
+
+    #taskList {
+      list-style: none;
+      margin: 0;
+      padding: 0
+    }
+
+    .task-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px;
+      border: 1px solid #f0e4ff;
+      border-radius: 14px;
+      margin-bottom: 10px;
+      background: var(--bone-faint);
+    }
+
+    .task-item.complete {
+      opacity: .6
+    }
+
+    .task-item.complete .task-name {
+      text-decoration: line-through
+    }
+
+    .task-info {
+      flex: 1
+    }
+
+    .task-name {
+      font-weight: 600
+    }
+
+    .task-meta {
+      font-size: 12px;
+      opacity: .8
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--bone-faint);
+      color: var(--forest-green);
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-right: 6px
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      padding: 6px 10px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .icon-btn:hover {
+      background: var(--bone-deep);
+    }
+
+    .empty {
+      opacity: .7;
+      text-align: center;
+      padding: 16px;
+      font-size: 14px
+    }
+
+    .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem var(--gutter);
+    border-top: 1px solid var(--line);
+  }
+
+  .footer-logo {
+    width: 8rem;
+    object-fit: contain;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1rem;
+    font-family: var(--body-font);
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+  }
